@@ -1,10 +1,10 @@
-# Irish Text-to-Speech Chrome Extension ☘️🎙️ #
-
 Is mise Mícheál Ó Cianáin (Michael Keenan)
 
-I like to build free tools to help with learning Irish!
+I like to build **free** tools to help with learning Irish!
 
-I usually share my progress on my 
+I usually share my progress on my [YouTube](https://www.youtube.com/@UncleMick)
+
+# Irish Text-to-Speech Chrome Extension ☘️🎙️ #
 
 This Chrome extension allows users to highlight Irish text on any webpage and hear it read aloud in a variety of Irish voices. It’s perfect for learners and enthusiasts who want to improve their Irish pronunciation or simply enjoy listening to the language.
 
