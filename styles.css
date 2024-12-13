@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'ardw';
+  src: url('ardchlo.woff2') format('woff2');
+}
+
+.popup-title{
+  font-family:'ardw';
+  color:#13671e;
+}
+
+#popupBody{
+  background-color: color(srgb 0.88 0.8365 0.6864 / 0.76);
+}
+
+#custom-icon {
+  width:30px;
+  height:30px;
+  text-align:center;
+  font-size: 15px;
+  background-color: white;
+  border: 1px solid #eb870a;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-mick-icon{
+  background-color:white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.custom-input {
+    color: black;
+    font-size: 0.6rem;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff5e;
+    padding: 5px 5px 5px 8px;
+    border: 1px solid #595959;
+}
+
+.custom-input:hover {
+  background-color: #4588ff;
+  color: white;
+  cursor: pointer;
+}
+
+.mick-icon{
+  background-color:white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.popup-mick-icon span {
+    background: url(mickicon.png);
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    position: absolute;
+}
+
+.popup-mick-icon:hover {
+  cursor: pointer;
+}
