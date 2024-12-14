@@ -26,7 +26,7 @@ This Chrome extension allows users to highlight Irish text on any webpage and he
 
 ## Usage ##
 1. Highlight any Irish text on a webpage.
-2. Click the shamrock icon that appears near the text.
+2. Click the UncleMick icon that appears near the text.
 3. Enjoy listening to the text read aloud in an Irish voice from Abair!
 
 ## Future Improvements ##
