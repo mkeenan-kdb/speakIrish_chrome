@@ -14,7 +14,7 @@ This Chrome extension allows users to highlight Irish text on any webpage and he
 
 ## How It Works ##
 1. Highlight Text: Select text on any webpage.
-2. Click the Icon: A shamrock icon (☘️) will appear. Click it to play the text in the selected Irish voice.
+2. Click the Icon: The 'UncleMick icon™️ '(lol) will appear. Click it to play the text in the selected Irish voice.
 3. Change Voices: Open the extension popup and choose your preferred voice from the dropdown menu.
 
 ## Installation ##
