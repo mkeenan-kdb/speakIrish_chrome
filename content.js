@@ -28,7 +28,7 @@ document.addEventListener("mouseup", (event) => {
     img.src = "https://mkeenan-kdb.github.io/seanchlo/img/mickicon.png"; // Replace with your image URL
     img.alt = "Icon";
     img.style.width = "26px"; // Set desired width
-    img.style.height = "26px"; // Set desired height
+    img.style.height = "27px"; // Set desired height
     img.style.marginTop = "1px";
 
     // Append image to the icon
