@@ -4,6 +4,8 @@ I like to build **free** tools to help with learning Irish!
 
 I usually share my progress on my [YouTube](https://www.youtube.com/@UncleMick)
 
+Dec 2024 *This is the BETA VERSION, I have more refinements to make, just sharing the preliminary version*
+
 # Irish Text-to-Speech Chrome Extension ☘️🎙️ #
 
 This Chrome extension allows users to highlight Irish text on any webpage and hear it read aloud in a variety of Irish voices. It’s perfect for learners and enthusiasts who want to improve their Irish pronunciation or simply enjoy listening to the language.
