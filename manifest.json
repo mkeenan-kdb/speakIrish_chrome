@@ -6,7 +6,8 @@
   "permissions": [
     "activeTab",
     "contextMenus",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "host_permissions": [
     "https://api.abair.ie/*"
@@ -14,13 +15,11 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
-    }
-  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "css": ["styles.css"]
+  }],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

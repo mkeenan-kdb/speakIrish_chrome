@@ -8,13 +8,16 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "playSound") {
+    console.log("Background.js - playSound triggered!");
     const selectedText = message.text;
+    const selectedVoice = message.voice || "ga_CO_snc_piper"; // Default voice
+
     if (!selectedText) {
       sendResponse({ success: false, error: "No text selected" });
       return;
     }
 
-    console.log("Fetching audio for:", selectedText);
+    console.log(`Fetching audio for: "${selectedText}" with voice: "${selectedVoice}"`);
 
     fetch("https://api.abair.ie/v3/synthesis", {
         method: "POST",
@@ -25,7 +28,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           },
           voiceparams: {
             languageCode: "ga-IE",
-            name: "ga_CO_snc_piper",
+            name: selectedVoice, // Use the selected voice
             ssmlGender: "UNSPECIFIED"
           },
           audioconfig: {
@@ -55,7 +58,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           throw new Error("No audio content in response");
         }
 
-        // Send the audio content back to the content script
         sendResponse({ success: true, audioContent: json.audioContent });
       })
       .catch((error) => {
@@ -63,7 +65,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         sendResponse({ success: false, error: error.message });
       });
 
-    // Indicate that the response will be sent asynchronously
-    return true;
+    return true; // Indicate asynchronous response
   }
 });

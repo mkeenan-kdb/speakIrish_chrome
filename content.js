@@ -37,25 +37,31 @@ document.addEventListener("mouseup", (event) => {
     // Add click handler for the icon
     icon.addEventListener("click", () => {
       document.getElementById("custom-icon").remove();
-      console.log("Clicked icon!");
-      chrome.runtime.sendMessage(
-        {
-          action: "playSound",
-          text: selectedText
-        },
-        (response) => {
-          if (chrome.runtime.lastError) {
-            console.error("Error communicating with background:", chrome.runtime.lastError.message);
-          } else if (!response.success) {
-            console.error("Error from background:", response.error);
-          } else {
-            const audioContent = response.audioContent;
-            const audio = new Audio("data:audio/mp3;base64," + audioContent);
-            audio.play();
-            console.log("Sound played successfully");
+      console.log("Content.js - Clicked icon!");
+
+      // Get the selected voice from storage
+      chrome.storage.local.get(['selectedVoice'], (result) => {
+        const selectedVoice = result.selectedVoice || "ga_CO_snc_piper"; // Default if not set
+
+        chrome.runtime.sendMessage({
+            action: "playSound",
+            text: selectedText,
+            voice: selectedVoice // Include voice with the request
+          },
+          (response) => {
+            if (chrome.runtime.lastError) {
+              console.error("Error communicating with background:", chrome.runtime.lastError.message);
+            } else if (!response.success) {
+              console.error("Error from background:", response.error);
+            } else {
+              const audioContent = response.audioContent;
+              const audio = new Audio("data:audio/mp3;base64," + audioContent);
+              audio.play();
+              console.log("Sound played successfully");
+            }
           }
-        }
-      );
+        );
+      });
     });
 
     document.body.appendChild(icon);
