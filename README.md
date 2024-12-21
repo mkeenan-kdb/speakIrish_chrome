@@ -1,6 +1,6 @@
 Is mise Mícheál Ó Cianáin (Michael Keenan)
 
-I like to build **free** tools to help with learning Irish!
+I like to build **free** (even though I'm poor *ahem*) tools to help with learning Irish!
 
 I usually share my progress on my [YouTube](https://www.youtube.com/@UncleMick)
 
